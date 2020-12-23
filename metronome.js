@@ -4,8 +4,8 @@
 
 (function() {
 	let timer = null;
-  let beat1 = new Audio('beat1.wav');
-  let beat2 = new Audio('beat2.wav');
+  let beat1 = new Audio('beat1a.mp3');
+  let beat2 = new Audio('beat2a.mp3');
   let counter = 1;
   let beatNumber = 3;
 
@@ -46,10 +46,12 @@
 		timer = setTimeout(() => {
       if (counter == 1) {
         beat1.play();
+        console.log("1");
         counter++;
         timer = setTimeout(beat, beatDuration*1.5, beatDuration)
       } else if (counter <= beatNumber){
         beat2.play();
+        console.log("22");
         counter++;
         if (counter == beatNumber+1) {
           counter = 1;
