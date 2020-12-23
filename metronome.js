@@ -1,10 +1,4 @@
-// Allison Obourn
-// CSC 337, Fall 2018
-// lecture 8
 
-// This program starts a timer countdown displayed on the screen
-// that counts down every second until 0 minutes and 0 seconds are left
-// It then displays a times up message on the page
 
 "use strict";
 
@@ -40,6 +34,11 @@
     }
 
     const beatDuration = 60000/bpm;
+    if (timer != null) {
+      clearTimeout(timer);
+      timer = null;
+    }
+
     beat(beatDuration);
   }
 
@@ -48,14 +47,14 @@
       if (counter == 1) {
         beat1.play();
         counter++;
-        setTimeout(beat, beatDuration*1.5, beatDuration)
+        timer = setTimeout(beat, beatDuration*1.5, beatDuration)
       } else if (counter <= beatNumber){
         beat2.play();
         counter++;
         if (counter == beatNumber+1) {
           counter = 1;
         }
-        setTimeout(beat, beatDuration, beatDuration)
+        timer = setTimeout(beat, beatDuration, beatDuration)
       }
     })
 	}

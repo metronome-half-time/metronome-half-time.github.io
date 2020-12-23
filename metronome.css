@@ -1,7 +1,4 @@
-/*
-CSE 337
-CSS styles for alarm clock page
-*/
+
 
 body {
 	margin-left: 20%;
@@ -16,7 +13,7 @@ body, input, button {
 input {
   width: 60px;
   margin-right: 10px;
-  text-align: right; 
+  text-align: right;
 }
 
 div {
