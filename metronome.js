@@ -45,13 +45,13 @@
   function beat(beatDuration) {
 		timer = setTimeout(() => {
       if (counter == 1) {
+        beat1.currentTime = 0;
         beat1.play();
-        console.log("1");
         counter++;
         timer = setTimeout(beat, beatDuration*1.5, beatDuration)
       } else if (counter <= beatNumber){
+        beat2.currentTime = 0;
         beat2.play();
-        console.log("22");
         counter++;
         if (counter == beatNumber+1) {
           counter = 1;
